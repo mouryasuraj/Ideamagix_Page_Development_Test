@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* Common Css Started */
+body {
+    font-size: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap
+}
+
+ul {
+    list-style: none;
+}
+
+/* Common Css Ended */
+
+
+
+
+
+
+/* Header started */
+header {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10em;
+}
+
+.logo img {
+    width: 25em;
+}
+
+.book_consultation i,
+.call_us i:first-child,
+.email_us i:first-child {
+    font-size: 3.5em;
+    margin: 0 15px;
+}
+
+.book_consultation p:first-child,
+.call_us p:first-child,
+.email_us p:first-child {
+    color: rgb(66, 66, 66);
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+.call_us a:hover,
+.email_us a:hover {
+    text-decoration: underline;
+}
+
+.header a,
+p:last-child {
+    color: black;
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+.call_us,
+.email_us {
+    position: relative;
+}
+
+.fa-wifi {
+    position: absolute;
+    top: 4px;
+    left: 28px;
+    transform: rotate(45deg);
+    font-size: 2em;
+}
+
+.fa-at {
+    position: absolute;
+    top: 13.5px;
+    left: 27px;
+    font-size: 1.1em;
+}
+
+.country {
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.country:hover {
+    background-color: rgb(223, 222, 222);
+}
+
+.country img {
+    width: 4em;
+    margin-right: .8em;
+    cursor: pointer;
+}
+
+
+
+/* Navbar Started */
+.navbar {
+    padding: 0 10em;
+    background-color: #14A6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav_list {
+    width: 70%;
+}
+
+.nav_list ul {
+    justify-content: space-between;
+}
+
+.nav_list ul li a {
+    color: #e2f4fb;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+
+.nav_list ul li {
+    padding: 15px 0;
+    font-size: 1.7em;
+    margin-right: 10px;
+}
+
+.fa-plus {
+    font-size: .7em;
+    margin-left: 4px;
+}
+
+.nav_list ul li:hover{
+    opacity: .8;
+}
+
+.search {
+    width: 18%;
+    background-color: #107df7;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    margin-right: 7px;
+}
+
+.search input {
+    background-color: #107df7;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    color: #d9f2ff;
+    height: 100%;
+    padding: 5px;
+    font-size: 1.4em;
+}
+
+.search input::placeholder {
+    color: #d9f2ff;
+    font-size: 1.3em;
+}
+
+.search i {
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+/* Navbar Ended */
+
+/* Header Ended */
+
+
+
+
+
+
+/* Section Banner Started */
+.banner {
+    width: 100%;
+    height: 40em;
+    background: url(../Images/Banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.path {
+    padding: 5px 0;
+}
+
+.path ul li {
+    font-size: 1.7em;
+    /* color: rgb(10, 5, 36); */
+    color: rgb(2, 34, 55);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.path i {
+    margin: 0 10px;
+}
+
+.banner h2 {
+    color: #1c1445;
+    font-size: 4.2em;
+    margin-top: 25px;
+}
+
+.banner p {
+    width: 550px;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-size: 1.7em;
+    color: #ba2020;
+    opacity: 0.9;
+}
+.enquiry{
+    width: fit-content;
+    padding: 10px 25px;
+    border: 0;
+    background-color: #107df7;
+    color: white;
+    font-size: 1.8em;
+    border-radius: 2px;
+    margin-top: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.enquiry:hover{
+    opacity: 0.8;
+}
+/* Section Banner Ended */
+
+
+
+
+/* Section Main Content Started */
+
+.content_list{
+    padding: 0 10em;
+    border-bottom: 1px solid gray;
+}
+.content_list ul{
+    width: 85%;
+}
+.content_list ul li{
+    font-size: 1.7em;
+    padding: 20px 0;
+    margin-right: 40px;
+}
+.active{
+    border-bottom: 5px solid #14A6F6;
+}
+
+/* Section Main Content Ended */
