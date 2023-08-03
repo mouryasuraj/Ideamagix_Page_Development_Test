@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +8,10 @@
 
 
 
-
 /* Common Css Started */
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-size: 10px;
 }
@@ -21,6 +22,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .flex {
@@ -28,11 +30,9 @@ a {
     align-items: center;
     flex-wrap:wrap
 }
-
-ul {
+ul{
     list-style: none;
 }
-
 /* Common Css Ended */
 
 
@@ -123,11 +123,13 @@ p:last-child {
 
 /* Navbar Started */
 .navbar {
+    width: 100%;
     padding: 0 10em;
     background-color: #14A6F6;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav_list {
@@ -135,7 +137,8 @@ p:last-child {
 }
 
 .nav_list ul {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    list-style: none;
 }
 
 .nav_list ul li a {
@@ -158,9 +161,22 @@ p:last-child {
 .nav_list ul li:hover{
     opacity: .8;
 }
-
+#menubar, #closebar{
+    display: none;
+    font-size: 3.5em;
+}
+#menubar{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+#closebar{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
 .search {
-    width: 18%;
+    width: 20em;
     background-color: #107df7;
     display: flex;
     align-items: center;
@@ -202,9 +218,7 @@ p:last-child {
 .banner {
     width: 100%;
     height: 40em;
-    background: url(../Images/Banner.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../Images/Banner.jpg) center no-repeat;
     background-size: cover;
     padding: 1em 10em;
     display: flex;
@@ -264,9 +278,15 @@ p:last-child {
 
 /* Section Main Content Started */
 
+/* Content list */
+.main-content{
+    width: 100%;
+}
 .content_list{
     padding: 0 10em;
     border-bottom: 1px solid gray;
+    background-color: white;
+    margin-top: -1px;
 }
 .content_list ul{
     width: 85%;
@@ -276,8 +296,714 @@ p:last-child {
     padding: 20px 0;
     margin-right: 40px;
 }
-.active{
-    border-bottom: 5px solid #14A6F6;
+.active, .current:hover{
+    border-bottom: 4px solid #14A6F6;
+}
+
+/* content */
+.reverse{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 6em 10em;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 6em 10em;
+}
+.description{
+    width: 65%;
+}
+
+#overview{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+}
+.content_heading{
+    color: black;
+    font-size: 3em;
+}
+.content_heading span{
+    color: red;
+}
+#overview p{
+    color: black;
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+.content_image{
+    width: 45%;
+}
+.content_image img{
+    width: 100%;
+}
+hr{
+    width: 89%;
+    margin:0 auto 6em auto;
+    border: 0;
+    border-bottom:2px dashed #14A6F6;
+    
+}
+.content_description p{
+    color: black;
+    font-size: 1.4em;
+    line-height: 1.7;
+    margin: 25px 0;
+}
+.content_description i{
+    font-size: .8em;
+    margin-right:20px;
+}
+.content_description li{
+    font-size:1.4em ;
+    line-height: 1.7;
+    margin: 10px 0;
+    
+}
+.description hr{
+    width: 100%;
+    margin: 6em 0;
+}
+
+
+/* Treatment FAQs */
+.faq{
+    padding: 20px 10px;
+    font-size: 2em;
+    cursor: pointer;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.question{
+    display: flex;
+    align-items: center;
+}
+.ans{
+    display: flex;
+    font-size: .7em;
+    height: fit-content;
+    padding: 25px 0 25px 30px;
+    border-top: 2px solid #14A6F6;
+    border-bottom: 2px solid #14A6F6;
+    transition: all .5s;
+}
+.answer{
+    display: none;
+}
+.answer .line{
+    border: 2px solid #0c7af8;
+    margin-right: 30px;
+}
+.treatment_faqs_list{
+    background-color: white;
+    position: relative;
+}
+
+.treatment_faqs_list .sign{
+    color: #0c7af8;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+/* Patient and Stories */
+.stories{
+    width: 100%;
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.story{
+    width: 100%;
+    border: 2px solid rgb(204, 204, 204);
+    padding: 1.8em 1.6em;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+}
+.row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.row1 p{
+    font-size: 2em;
+    width: 70%;
+}
+.row1 i{
+    font-size: 4em;
+}
+.row2, .row2 iframe{
+    width: 100%;
+    height: 200px;
+}
+
+.row3{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.profile {
+    width: 45px;
+}
+.row3 .profile img{
+    width: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.profile_info{
+    display: flex;
+    flex-direction: column;
+    justify-items:  center;
+    margin-left: 1.5em;
+}
+.profile_info .name{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.profile_info .location{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+}
+
+
+
+
+
+/* Need Help */
+.need_help{
+    width: 30%;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow:1px 1px 10px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    padding: 3em 2.5em;
+}
+.need_help h3{
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 2.5em;
+    color: #107df7;
+}
+.need_help p{
+    font-size: 1.7em;
+    margin: 20px 0;
+}
+.need_help input, .need_help textarea{
+    padding: 10px 15px;
+    outline: none;
+    border: 2px solid rgb(184, 184, 184);
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.need_help button{
+    padding: 15px ;
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    background:linear-gradient(to right, #0c7af8,#77b3f8);
+    color: #eff9ff;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+.need_help button:hover{
+    opacity: 0.9;
 }
 
 /* Section Main Content Ended */
+
+
+
+/* Section Doctors Started */
+.doctors{
+    background-color: #e9f2f7;
+    text-align: center;
+    padding: 5em 10em;
+    width: 100%;
+}
+.doctors .heading, .hospital .heading{
+    font-size: 2.5em;
+    color: red;
+    font-family: 'Edu SA Beginner', cursive;
+    margin-bottom: 8px;
+}
+.doctors .top_doctors, .hospital .top_hospital{
+    font-size: 2.8em;
+    font-weight: bold;
+}
+.doctors .top_doctors span{
+    color: #0c7af8;
+}
+
+.owl-carousel, .hospitals_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:5em;
+    flex-wrap: wrap;
+}
+
+.doctors .item{
+    width: 100%;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all .2s;
+    overflow: hidden;
+}
+.doctors .item img{
+    width: 100%;
+}
+.doctors .item .name{
+    color: red;
+    font-size: 2em;
+    font-family: 'Edu SA Beginner', cursive;
+    margin: 20px 0 12px 0;
+}
+.doctors .item .location{
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 17px;
+}
+.doctors .item .specilization{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(40, 30, 30);
+    margin-bottom: 20px;
+}
+
+/* Section Doctors Ended */
+
+
+
+/* Section Hospital Started */
+
+.hospital{
+    padding: 5em 7em;
+    text-align: center;
+    width: 100%;
+}
+.hospital .item{
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px dashed red;
+    width: 100%;
+    margin-bottom: 7em;
+}
+.hospital .item img{
+    border-radius: 5px 5px 0 0;
+}
+.hospital .item .name{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 20px 0;
+}
+.hospital .item .location{
+    color: red;
+    font-weight: bold;
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+
+}
+
+.hospital .explore{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.explore a{
+    color: red;
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+    margin: 30px 0;
+}
+/* Section Hospital Ended */
+
+
+
+
+/* Section HealthCare Started */
+
+.healthcare{
+    padding: 6em 10em;
+    background-color: #13a5f8;
+    text-align: center;
+    width: 100%;
+}
+.healthcare p:first-child{
+    font-size: 2em;
+    color: #d9f2ff;
+}
+.healthcare .healthcare_heading{
+    font-size: 3.5em;
+    color: #d9f2ff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 25px 0;
+}
+.get_in_touch button{
+    padding: 15px 25px;
+    color: white;
+    background-color:#01639c;
+    border: 0;
+    font-size: 1.7em;
+    width: fit-content;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.get_in_touch button:hover{
+    opacity: .8;
+    background-color: white;
+    color: black;
+}
+.get_in_touch a{
+    padding: 15px 25px;
+    color: white;
+    border-left: 1px solid white;
+    font-size: 1.7em;
+}
+.get_in_touch a:hover{
+    text-decoration: underline;
+}
+/* Section HealthCare Ended */
+
+
+
+/* Footer Started */
+footer{
+    width: 100%;
+    background-color:#0b2432;
+    padding: 2em 8em;
+    position: relative;
+}
+.important_links{
+    color: white;
+    width: 250px;
+    margin-top: 3em;
+}
+.important_links p{
+    font-size:1.7em ;
+}
+.important_links ul{
+    padding-left: 5px;
+    list-style: none;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+.important_links ul li a span{
+    color: #01639c;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.important_links li{
+    margin: 12px 0;
+}
+.important_links ul a{
+    color: white;
+    font-size: 1.3em;
+}
+.important_links ul a:hover{
+    color: #13a5f8;
+}
+
+.footer_links{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgb(136, 136, 136);
+    padding-bottom: 30px;
+}
+.medical_tourism{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* Join Mediretreats */
+.join_mediretreats{
+    background-color: white;
+    width: 300px;
+    position: absolute;
+    top: -4em;
+    right: 4em;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+.join{
+    display: flex;
+    align-items: center;
+}
+.join_mediretreats i{
+    font-size: 3.5em;
+    margin-right: 10px;
+}
+.icon_description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 8px;
+}
+.icon_description p:first-child{
+    font-size: 1.7em;
+    color: rgb(64, 64, 64);
+}
+.icon_description p:last-child{
+    font-size: 2em;
+    font-weight: bold;
+}
+.join_mediretreats .lorem{
+    font-size:1.3em ;
+    margin-top: 10px;
+    caret-color: rgb(81, 81, 81);
+}
+
+
+
+/* About Aafiya */
+.about_aafiya{
+    margin-top: 30px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about_aafiya .logo{
+    width: fit-content;
+}
+.about{
+    width: 650px;
+}
+.about h2{
+    font-size:3em ;
+    color: white;
+}
+.about p{
+    color: white;
+    font-size:1.3em ;
+    line-height: 1.7;
+    font-weight: 200;
+}
+
+/* social media */
+.social_media{
+    width: 150px;
+    color: white;
+}
+.social_media h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.social_media ul{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.social_media i{
+    font-size: 3em;
+}
+.social_media p{
+    font-size: 1.7em;
+}
+.social_media .phoneNumber{
+    font-size: 2em;
+    color: #4a9fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer Ended */
+
+
+
+/* Terms and COndition started */
+.term_and_condition{
+    width: 100%;
+    background-color: #13a5f8;
+    padding: 2em 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.copyright, .term_and_condition ul li a{
+    color: white;
+    font-size: 2em;
+}
+.term_and_condition ul a:hover{
+    text-decoration: underline;
+}
+.term_and_condition ul{
+    display: flex;
+    align-items: center;
+}
+.term_and_condition li{
+    margin-right: 20px;
+}
+/* Terms and COndition Ended */
+
+
+
+
+
+
+
+/* GOtoTop Button */
+.goTop{
+    padding: 10px 15px;
+    background-color: rgb(255, 40, 40);
+    border-radius: 3px;
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 100;
+}
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width:1178px) {
+    body{
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width:1131px) {
+    body{
+        font-size: 8px;
+    }
+    .join_mediretreats{
+        top: -12em;
+    }
+}
+@media screen and (max-width:991px) {
+    .navbar{
+        flex-direction: row-reverse;
+    }
+    .search {
+        padding: 10px 30px;
+        width: 100%;
+    }
+    #menubar, #closebar{
+        display: block;
+    }
+    .navbar ul{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: -30em;
+        background-color: #01639c;
+        padding: 25px 30px 15px 30px;
+        z-index: 99;
+        height: 100vh;
+        transition: all .3s;
+    }
+    .about_aafiya .logo{
+        margin-right: 4em;
+    }
+    .term_and_condition ul li{
+        margin-top: 3em;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    #overview{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .description{
+        width: 100%;
+    }
+    .need_help{
+        width: 70%;
+        margin: 10em auto 0 auto;
+    }
+    .join_mediretreats{
+        width: 200px;
+        padding: 10px 15px;
+    }
+    .join_mediretreats i{
+        font-size: 2em;
+    }
+    .icon_description p:first-child{
+        font-size:1.2em ;
+    }
+    .icon_description p:last-child{
+        font-size: 1.5em;
+    }
+    .join_mediretreats .lorem{
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width:521px) {
+  .header{
+    padding: 1em 2em;
+  } 
+  .navbar{
+    padding: 0;
+  }
+  .banner{
+    padding: 1em 3em;
+  }
+  .banner p {
+    width: 350px;
+  }
+  .content_list{
+    padding: 0 3em;
+  }
+  .content_list ul{
+    width: 100%;
+  }
+  .content_list ul li{
+    padding: 15px 0;
+  }
+  .content_image{
+    width: 100%;
+  }
+  .reverse{
+    padding: 2em 3em;
+  }
+  .content{
+    padding: 2em 3em;
+  }
+  .need_help{
+    padding: 3em 2em;
+    width: 80%;
+  }
+  .story{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about_aafiya .logo{
+    margin-bottom: 30px;
+  }
+  .about{
+    margin-bottom: 20px;
+  }
+  .search{
+    margin-right: 0;
+  }
+}
