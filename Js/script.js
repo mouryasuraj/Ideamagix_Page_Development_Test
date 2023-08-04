@@ -62,11 +62,14 @@ let closebar = document.getElementById('closebar')
 
 menubar.addEventListener('click', ()=>{
     let menu = document.getElementById('menu');
-    menu.style.right = '0em'
+    // menu.style.top = '0em';
+    // menu.style.right = '0em';
+    menu.style.display = 'block'
 })
 closebar.addEventListener('click', ()=>{
     let menu = document.getElementById('menu');
-    menu.style.right = '-30em'
+    // menu.style.top = '-100em'
+    menu.style.display = 'none'
 })
 
 
@@ -75,6 +78,7 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:20,
     nav:false,
+    stagePadding:60,
     responsive:{
         0:{
             items:1
@@ -88,9 +92,3 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-
-let current = document.querySelector('current')
-
-current.addEventListener('click', ()=>{
-    current.classList.toggle('active')
-})

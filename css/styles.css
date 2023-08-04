@@ -910,13 +910,17 @@ footer{
     .navbar ul{
         flex-direction: column;
         position: absolute;
-        top: 0;
-        right: -30em;
+        top: 0em;
+        right: 0em;
         background-color: #01639c;
         padding: 25px 30px 15px 30px;
         z-index: 99;
         height: 100vh;
         transition: all .3s;
+        display: none;
+    }
+    .d-none{
+        display: none;
     }
     .about_aafiya .logo{
         margin-right: 4em;
@@ -989,6 +993,10 @@ footer{
   .content{
     padding: 2em 3em;
   }
+  .doctors, .hospital, .healthcare{
+    padding: 3em 2em;
+  }
+
   .need_help{
     padding: 3em 2em;
     width: 80%;
@@ -1007,6 +1015,12 @@ footer{
     margin-right: 0;
   }
   .join_mediretreats{
-    top: -3em;
+    top: -1em;
+    right: 1em;
   }
 }
+/* @media screen and (max-width:450px){
+    .nav_list ul{
+        right: 0;
+    }
+} */
