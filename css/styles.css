@@ -996,6 +996,13 @@ footer{
   .doctors, .hospital, .healthcare{
     padding: 3em 2em;
   }
+  footer{
+    padding: 3em 3em;
+    font-size: 1.2em;
+  }
+  .term_and_condition{
+    padding: 3em 3em;
+  }
 
   .need_help{
     padding: 3em 2em;
@@ -1006,7 +1013,11 @@ footer{
     margin-bottom: 30px;
   }
   .about_aafiya .logo{
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    width: 100%;
+  }
+  .about_aafiya .logo img{
+    width: 100%;
   }
   .about{
     margin-bottom: 20px;
@@ -1019,8 +1030,3 @@ footer{
     right: 1em;
   }
 }
-/* @media screen and (max-width:450px){
-    .nav_list ul{
-        right: 0;
-    }
-} */
